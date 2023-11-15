@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+    padding: 0px ;
+    
+}
+body{
+    /* padding: 25px; */
+    color: rgb(219, 219, 219);
+    display: flex;
+    flex-flow: row wrap;
+    /* padding: 30px; */
+    height: 100vh;
+    justify-content:flex-start;
+    
+
+}
+.card{     
+    border: 2px solid black;
+    width: 14vw;
+    height: 45vh;
+    background-color:#fbf6ed;
+    border-radius: 5px;
+    /* margin-top: 50px; */
+    /* margin-bottom: 50px; */
+    margin: 7vh 1vw 1vh 3vw;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.2s;
+  }
