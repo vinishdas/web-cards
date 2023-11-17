@@ -27,10 +27,13 @@ body{
     text-align: center;
     transition: all 0.2s;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
   }
   #card1 button{
+    margin-top: 120px;
+    display: block;
     width: 80%;
     border-radius: 50px;
     font-size: large;
@@ -88,3 +91,62 @@ body{
       width: 60%;
     }
   }
+  /*------ Settings ------*/
+.container {
+  
+  --color: #419eb8;
+  --size: 30px;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  position:relative ;
+  cursor: pointer;
+  font-size: var(--size);
+  user-select: none;
+  fill: var(--color);
+  
+  /* /* bottom:135px; */
+  left: 60px; 
+
+}
+
+.container .clipboard {
+  position: absolute;
+  animation: keyframes-fill .5s;
+}
+
+.container .clipboard-check {
+  position: absolute;
+  display: none;
+  animation: keyframes-fill .5s;
+}
+
+/* ------ On check event ------ */
+.container input:checked ~ .clipboard {
+  display: none;
+}
+
+.container input:checked ~ .clipboard-check {
+  display: block;
+}
+
+/* ------ Hide the default checkbox ------ */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* ------ Animation ------ */
+@keyframes keyframes-fill {
+  0% {
+    transform: rotate(0deg) scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: rotate(-10deg) scale(1.2);
+  }
+}
