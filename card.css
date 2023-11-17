@@ -4,25 +4,23 @@
     
 }
 body{
-    /* padding: 25px; */
+ 
     background-color: #eae4dc;
     color: rgb(219, 219, 219);
     display: flex;
     flex-flow: row wrap;
-    /* padding: 30px; */
     height: 100vh;
-    /* justify-content:space-evenly; */
+  
     
 
 }
 .card{     
-    /* border: 2px solid #EE6C4D; */
+    min-width: 200px;
     width: 14vw;
     height: 45vh;
     background-color: #202121;
     border-radius: 10px;
-    /* margin-top: 50px; */
-    /* margin-bottom: 50px; */
+    
     margin: 7vh 20px 1vh 20px;
     padding: 20px;
     text-align: center;
@@ -77,5 +75,12 @@ body{
     width: 83%;
     filter:brightness(0.9); 
       
+    }
+  }
+  @media(max-width:450px){
+    body{
+        /* flex-direction: column; */
+        justify-content: center;
+        /* align-items: center; */
     }
   }
